@@ -5,7 +5,7 @@ url: index.html
 image: me.jpg
 ---
 
-## Contact me 
+## Keep in touch 
 
 Thank you for visiting my site. Please visit again as my experience with robots has only just begun! If you'd like to contact me, you can find me through: 
 
