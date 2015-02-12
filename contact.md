@@ -2,14 +2,14 @@
 layout: contact
 path: /contact
 url: index.html
-image: http://unsplash.it/400?random
+image: me.jpg
 ---
 
-## Quick Spiel
-Lorem ipsum dolor sit amet, tota primis copiosae id quo. Melius eligendi elaboraret pri et, eam menandri platonem te. Tollit iudicabit gloriatur per ad. Ad diceret recteque eum, eu commodo petentium qui. No aliquid delectus eam, dicta eripuit convenire te nec. Vix no veritus dignissim. Erat ferri veniam ut eos, pro ex eius error intellegat, his te graecis oporteat honestatis.
+## Keep in touch 
 
-* Phone: (123) 456-7890
-* Email: youremail@youremail.com
-* Address: 2145 Sheridan Rd., Evanston, IL, 60201
+Thank you for visiting my site. Please visit again as my experience with robots has only just begun! If you'd like to contact me, you can find me through: 
 
-Ad case nemore equidem mea. Duo te iuvaret appetere appellantur, sint scaevola usu cu. Eum ne aeque ridens prompta. At legendos vulputate eos, pro illum iuvaret cu, ludus vituperata usu no.
+* Email: m.nejati@u.northwestern.edu
+* LinkedIn: [Mahdieh Nejati](https://www.linkedin.com/profile/view?id=209310293&trk=nav_responsive_tab_profile "Mahdieh's LinkedIn Profile")
+* Phone: (920) 716-7631
+* Address: 1735 Chicago Ave. 902N, Evanston, IL, 60201
