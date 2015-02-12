@@ -18,15 +18,18 @@ Now in the Robotics graduate program at Northwestern, I am strengthening my skil
 ### Education
 
 * Master of Science in Robotics (in progress)
-..* [Northwestern Univeristy](http://robotics.northwestern.edu/), Evanston, IL, USA
-..* Fall 2014 - present
+    
+    * [Northwestern Univeristy](http://robotics.northwestern.edu/), Evanston, IL, USA
+    
+    * Fall 2014 - present
 
 * Bachelor of Engineering in Mechatronics 
-..* [The University of Auckland](http://www.mech.auckland.ac.nz/en/for/future-undergraduates/fu-study-options/behonsmechatronics.html), Auckland, New Zealand
+* 
+    * [The University of Auckland](http://www.mech.auckland.ac.nz/en/for/future-undergraduates/fu-study-options/behonsmechatronics.html), Auckland, New Zealand
 
-..* 2012
+    * 2008 - 2012
 
-..* First Class Honors
+    * First Class Honors
 
 ### Professional Experience 
 
