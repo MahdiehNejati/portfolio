@@ -23,21 +23,27 @@ Now in the Robotics graduate program at Northwestern, I am strengthening my skil
 
 * Bachelor of Engineering in Mechatronics 
 ..* [The University of Auckland](http://www.mech.auckland.ac.nz/en/for/future-undergraduates/fu-study-options/behonsmechatronics.html), Auckland, New Zealand
+
 ..* 2012
+
 ..* First Class Honors
 
 ### Professional Experience 
 
 *[StretchSense Limited](http://www.stretchsense.com/ "StretchSense Ltd. Homepage"), Auckland, New Zealand
+
 ..*Fellowship (Research and Development/Sales and Marketing)
 
 *[Biomimetics Laboratory](http://www.abi.auckland.ac.nz/en/about/our-research/biomimetics.html "ABI Biomimetics Lab Homepage"), Auckland Bioengineering Institute, Auckland, New Zealand
+
 ..*Research Engineer
 
 *Biomimetics Laboratory, Auckland Bioengineering Institute, Auckland, New Zealand
+
 ..*Assistant Engineer (Scholarship Intern)
 
 *[ICT Center](http://utcan.ut.ac.ir/en/index.aspx), College of Agriculture and Natural Resources (UTCAN), University of Tehran, Karaj, Iran
+
 ..*Web Designer and Computer Network Assistant (Intern)
 
 ### Research interests
