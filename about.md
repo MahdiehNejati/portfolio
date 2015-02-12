@@ -33,21 +33,21 @@ Now in the Robotics graduate program at Northwestern, I am strengthening my skil
 
 ### Professional Experience 
 
-*[StretchSense Limited](http://www.stretchsense.com/ "StretchSense Ltd. Homepage"), Auckland, New Zealand
+* [StretchSense Limited](http://www.stretchsense.com/ "StretchSense Ltd. Homepage"), Auckland, New Zealand
 
-    *Fellowship (Research and Development/Sales and Marketing)
+    * Fellowship (Research and Development/Sales and Marketing)
 
-*[Biomimetics Laboratory](http://www.abi.auckland.ac.nz/en/about/our-research/biomimetics.html "ABI Biomimetics Lab Homepage"), Auckland Bioengineering Institute, Auckland, New Zealand
+* [Biomimetics Laboratory](http://www.abi.auckland.ac.nz/en/about/our-research/biomimetics.html "ABI Biomimetics Lab Homepage"), Auckland Bioengineering Institute, Auckland, New Zealand
 
-    *Research Engineer
+    * Research Engineer
 
-*Biomimetics Laboratory, Auckland Bioengineering Institute, Auckland, New Zealand
+* Biomimetics Laboratory, Auckland Bioengineering Institute, Auckland, New Zealand
 
-    *Assistant Engineer (Scholarship Intern)
+    * Assistant Engineer (Scholarship Intern)
 
-*[ICT Center](http://utcan.ut.ac.ir/en/index.aspx), College of Agriculture and Natural Resources (UTCAN), University of Tehran, Karaj, Iran
+* [ICT Center](http://utcan.ut.ac.ir/en/index.aspx), College of Agriculture and Natural Resources (UTCAN), University of Tehran, Karaj, Iran
 
-    *Web Designer and Computer Network Assistant (Intern)
+    * Web Designer and Computer Network Assistant (Intern)
 
 ### Research interests
 
