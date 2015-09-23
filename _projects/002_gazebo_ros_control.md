@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Project 3
-date: September 24, 2014
+title: ros_control and Gazebo
+date: October 15, 2014
 image: rrrbot.jpg
 ---
 
