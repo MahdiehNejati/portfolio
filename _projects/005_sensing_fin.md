@@ -7,4 +7,4 @@ image: sensingfin.png
 
 ## Overview
 
-[Presentation](https://github.com/mahdiehnejati/portfolio/blob/gh-pages/public/documents/sensingfin.pptx)
+[Presentation](https://github.com/mahdiehnejati/portfolio/blob/gh-pages/public/documents/sensingfin.pptx) 
