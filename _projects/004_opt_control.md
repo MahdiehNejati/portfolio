@@ -2,7 +2,7 @@
 layout: project
 title: Optimal torque control of an RR robotic arm
 date: June 12, 2015
-image: 
+image: doublependulum.jpg
 ---
 
 ## Overview
