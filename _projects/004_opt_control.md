@@ -1,21 +1,15 @@
 ---
 layout: project
-title: Project 4
-date: September 25, 2014
-image: images.jpg
+title: Optimal torque control of an RR robotic arm
+date: June 12, 2015
+image: 
 ---
 
 ## Overview
-Lorem ipsum dolor sit amet, tota primis copiosae id quo. Melius eligendi elaboraret pri et, eam menandri platonem te. Tollit iudicabit gloriatur per ad. Ad diceret recteque eum, eu commodo petentium qui. No aliquid delectus eam, dicta eripuit convenire te nec. Vix no veritus dignissim. Erat ferri veniam ut eos, pro ex eius error intellegat, his te graecis oporteat honestatis.
+The power of control using optimal control theory is its ability to specify the control goal for both fully and under actuated systems, be it linear or nonlinear. What makes optimal contorl attractive is being able to analytically solve intractable control problems. This project considers a fully actuated double pendulum which can also be solved analytically. 
 
-### Topic 1
-His nemore audiam consequat ad, no augue choro assueverit mei. Zril offendit tincidunt ne quo. At commodo integre alienum sea, cu vocent fuisset suscipit nam. Eum ex tation omnesque adversarium, mutat autem putant te nam. Id vix facilis complectitur, vis vitae vivendo euripidis ea, fugit eirmod an vix.
+### Equations of Motion
 
-### Topic 2
-Ad case nemore equidem mea. Duo te iuvaret appetere appellantur, sint scaevola usu cu. Eum ne aeque ridens prompta. At legendos vulputate eos, pro illum iuvaret cu, ludus vituperata usu no.
+The torque equations were derived using Lagrange's equations as follows: 
 
-### Topic 3
-Mel magna discere in. Mea ea dicit homero perfecto. Eam nulla facete scribentur in. Vide volutpat laboramus est cu, usu cu impetus dignissim. Ex pro decore impetus. Ius nihil iisque deterruisset an, ex sanctus verterem his. Doming prompta insolens est ut.
 
-### Topic 4
-Quod etiam pri ea, habemus electram ea eos, propriae insolens ea qui. Pro no mollis vituperatoribus. Augue quando delicatissimi ex per, vel ea vidisse dolorem eleifend. Has te aliquid senserit, reque soleat sed ea. At bonorum facilisis disputando est, error tantas appetere nec te. Mel in nobis animal.
