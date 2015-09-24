@@ -15,4 +15,4 @@ The source code is available on my github page. The code can properly be read if
 The torque equations were derived using Lagrange's equations as follows: 
 
 
-[Write Up](https://github.com/guiklink/portfolio/blob/gh-pages/public/Documents/2D_Quad/write_up.pdf)
+[Write Up](https://github.com/mahdiehnejati/portfolio/blob/gh-pages/public/documents/optimal_control/optControl.pdf)
