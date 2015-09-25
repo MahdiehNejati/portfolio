@@ -1,4 +1,4 @@
-# Master of Science in Robotics Student Portfolio Template
+# MSR Student Portfolio Template
 
 
 
@@ -8,13 +8,50 @@
 Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through Markdown and Liquid converters, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project's page, blog, or website from GitHub's servers for free (taken from Jekyll's website: http://jekyllrb.com/docs/home/).
 
 ### Get your workstation set up
-* Install <a href="https://www.ruby-lang.org/en/downloads/>Ruby</a>
-* Install <a href="rubygems.org/pages/download">RubyGems</a>
-* Install <a href="nodejs.org">NodeJS</a>
-* Install <a href="jekyllrb.com/docs/installation">Jekyll</a>
+To test your website locally, you will need the following packages:
+
+* <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a>
+* <a href="http://rubygems.org/pages/download">RubyGems</a>
+* <a href="http://nodejs.org">NodeJS</a>
+* <a href="http://jekyllrb.com/docs/installation">Jekyll</a>
+
+To install from `apt-get`, you can just run
+
+```
+sudo apt-get install ruby ruby-dev nodejs nodejs-dev jekyll
+```
+
+On Ubuntu 14.04, the versions of `ruby` and `jekyll` that are on `apt-get` are a
+bit out of date. Thus, if you install all of the packages from `apt-get` using
+the above command, you are likely to get errors when running commands in the
+[Basic Usage](#basic) section below. If you see errors about the `--watch`
+variable when running `jekyll build --watch`, run the following commands to use
+`rvm` (Ruby Version Manager) to install a new version of `ruby` and `jekyll`:
+
+```shell
+1 $  sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison \
+      libffi-dev curl icedtea-7-jre-jamvm nodejs nodejs-dev
+2 $  curl -L https://get.rvm.io | bash -s stable
+3 $  source ~/.rvm/scripts/rvm
+4 $  echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
+5 $  rvm install ruby --latest
+6 $  echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+7 $  gem update --system
+8 $  gem install jekyll
+```
+* line 1 installs dependencies for `rvm`
+* lines 2-4 configure your environment to use `ruby` versions installed from
+`rvm` instead of from `apt-get`
+* line 5 updates `rvm` itself
+* line 6 sets `gem` to not install documentation locally (this is optional)
+* line 7 updates `gem`
+* line 8 installs the latest `jekyll`
 
 ### Basic Usage (recommended)
-In one terminal, build the jekyll site, watching for any changes (run in site root directory)
+
+You'll first need a Jekyll site. If you are interested in using this template,
+you should clone this repo. In one terminal, build the jekyll site, watching for
+any changes (run in the site root directory)
 ```
 $  jekyll build --watch
 ```
@@ -85,7 +122,7 @@ runs that engine, processing and reprocessing the "raw" files every time you mak
 Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML, set between triple-dashed lines (taken from Jekyll's documentation: http://jekyllrb.com/docs/frontmatter/). Here's a basic example that you'll find in the index.html file:
 ```
 ---
-layout: default
+layout: main
 title: Portfolio
 ---
 ```
@@ -156,3 +193,53 @@ image: http://unsplash.it/400?random
 ---
 ```
 Following that front matter, just add content in regular markdown.
+
+### Editing appearance
+
+The appearance of the site is defined entirely by the
+interaction of several key HTML files and CSS defined to go along with them. The
+following describes the importance of each of the HTML files:
+
+* [main.html](_layouts/main.html) provides the general structure of every page
+  on the site. It includes common elements that are on all of the pages
+  including content for the HTML `<head>` tag, and page footers/headers. These
+  common elements are all defined in the `_includes` directory.
+* The other three html files inside of the `_layouts` directory define the
+  appearance of the about page, the contact page, and each of the project
+  entries. The [index.html](index.html) page defines the project grid that is
+  shown on the site's base URL
+* Note that all of these HTML files are of the `main` layout. Thus each of these
+  pages has the same `<head>` tag, and footer/header.
+
+These HTML files are only half of the story; the other requirement for defining
+appearance is the CSS to go along with the HTML. The CSS for this site is
+generated using [SASS](http://sass-lang.com/). Quoting from the [SASS
+documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
+
+> Sass is an extension of CSS that adds power and elegance to the basic
+> language. It allows you to use variables, nested rules, mixins, inline imports,
+> and more, all with a fully CSS-compatible syntax. Sass helps keep large
+> stylesheets well-organized, and get small stylesheets up and running quickly,
+> particularly with the help of the Compass style library.
+
+Basically we use the syntactical convenience of SASS to enable easier generation
+of our CSS. What this means is that if we want to update our site's CSS, we
+need to edit the [public/stylesheets/style.scss](public/stylesheets/style.scss)
+file and use SASS to build the corresponding CSS. To build the CSS file, `cd` to
+the `<project_root>/public/stylesheets/` directory and then execute
+
+```bash
+sass --watch style.scss:style.css
+```
+
+As you edit the SCSS file, the CSS file will be automatically updated!
+
+To install SASS you can either use `apt-get` or `gem`:
+
+```bash
+sudo apt-get install ruby-sass
+```
+or
+```bash
+gem install sass
+```
