@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 4
+title: Smart Wheelchair
 date: September 21, 2015
 image: 
 ---
