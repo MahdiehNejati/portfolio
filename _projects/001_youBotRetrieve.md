@@ -1,6 +1,6 @@
 ---
 layout: project
-title: youbot_retrieve_msr package
+title: youBot Block Retrieve
 date: September 22, 2014
 image: youbot_retrieve.png
 ---

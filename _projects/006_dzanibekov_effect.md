@@ -1,8 +1,8 @@
 ---
 layout: project
-title: Project 4
-date: September 25, 2014
-image: images.jpg
+title: Dzanibekov Effect
+date: December 15, 2014
+image: dzanibekov.png
 ---
 
 ## Overview
