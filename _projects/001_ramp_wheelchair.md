@@ -44,6 +44,10 @@ This work is based on the current wheelchair platform at the [Argallab](http://s
 
 ## Ramp Detection Algorithm
 
+Raw Point Cloud | Planar Surface Extraction | Ramp Segmentation
+------------ | ------------- | ------------ 
+![ramp6_raw](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/ramp6_raw.png) | ![extract_planar_surface](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/extract_planar_surface.png) | ![real_extract_ramp](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/real_extract_ramp.png)
+
 The image processing was done using the [Point Cloud Library](http://pointclouds.org/) framework [in ROS](http://wiki.ros.org/pcl). 
 
 * PCL is a large standalone C++ library
@@ -51,7 +55,13 @@ The image processing was done using the [Point Cloud Library](http://pointclouds
 * Numerous algorithms for filtering, model segmentation, etc. 
 * Many algorithms are already compiled as ROS nodelets.
 
-Most of the image processing is implemented using nodelets. This not only ensures the computation costs are kept at a minimum, but also because nodelets have several desirable characteristics as opposed to writing a separate node that loads pcl_ros libraries: 
+The ramp segmentation code was first developed as a standalone C++ file that takes in PCD files as the input. The code is linked [here](https://github.com/MahdiehNejati/my_pcl/blob/master/ramp_segmentation/ramp_segmentation.cpp). After the basic algorithm was developed, it was incorporated into the ROS framework by taking point cloud topics as the input. 
+
+Gazebo Sim Scene | Planar Surface Extraction | Ramp Segmentation
+------------ | ------------- | ------------ 
+![original_scene](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/original_scene.png) | ![rpg_point_cloud](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/rpg_point_cloud.png) | ![ramp_segmented](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/ramp_segmented.png)
+
+Most of the image processing was implemented using nodelets, inside the [openni_layer](https://github.com/MahdiehNejati/smart_wheelchair/blob/vision/src/nuric_system/launch/system/openni_layer.launch#L87-L163) launch file. This not only ensures the computation costs are kept at a minimum, but also because nodelets have several desirable characteristics as opposed to writing a separate node that loads pcl_ros libraries: 
 
 * Nodelets allow multiple algorithms in a single process.
 * No copy costs incurred when passing messages intraprocess
@@ -63,19 +73,9 @@ Most of the image processing is implemented using nodelets. This not only ensure
 	
 The last point is especially useful when tuning parameters in the image processing pipeline and significantly speeds up fine-tuning the algorithm. 
 
-The ramp detection algorithm pipeline looks like this: 
+The ramp detection algorithmic pipeline looks like this: 
 
-
-The algorithm was teted with simulation point cloud data, as well as real point cloud data. 
-
-Simuation| Real
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
-
-![youbot](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/youbot_retrieve.png)
-
+![ramp_pcl_pipeline](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/ramp_pcl.jpg) 
 
 This was my first foray into image processing with point cloud data, and I found the [pointcloud.org tutorials](http://pointclouds.org/documentation/tutorials/) helpful and well written. 
 
