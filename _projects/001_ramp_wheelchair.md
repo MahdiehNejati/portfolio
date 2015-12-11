@@ -35,7 +35,7 @@ The major components of this work included:
 
 Real Platform | Simulated Platform
 ------------ | -------------
-![real_wheelchair](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/real_wheelchair.jpg) | ![sim_wheelchair](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/wheelchair_sim_model.png)
+<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/real_wheelchair.jpg" width="300" height="300" /> | <img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/wheelchair_sim_model.png" width="300" height="300" />
 
 This work is based on the current wheelchair platform at the [Argallab](http://smpp.northwestern.edu/research/argallab/research.html). 
 
@@ -46,7 +46,7 @@ This work is based on the current wheelchair platform at the [Argallab](http://s
 
 Raw Point Cloud | Planar Surface Extraction | Ramp Segmentation
 ------------ | ------------- | ------------ 
-![ramp6_raw](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/ramp6_raw.png) | ![extract_planar_surface](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/extract_planar_surface.png) | ![real_extract_ramp](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/real_extract_ramp.png)
+<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/ramp6_raw.png" width="250" height="250" /> | <img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/extract_planar_surface.png" width="250" height="250" />|<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/real_extract_ramp.png" width="250" height="250" />
 
 The image processing was done using the [Point Cloud Library](http://pointclouds.org/) framework [in ROS](http://wiki.ros.org/pcl). 
 
@@ -59,7 +59,7 @@ The ramp segmentation code was first developed as a standalone C++ file that tak
 
 Gazebo Sim Scene | Planar Surface Extraction | Ramp Segmentation
 ------------ | ------------- | ------------ 
-![original_scene](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/original_scene.png) | ![rpg_point_cloud](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/rpg_point_cloud.png) | ![ramp_segmented](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/ramp_segmented.png)
+<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/original_scene.png" width="250" height="250" /> | <img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/rgp_point_cloud.png" width="250" height="250" /> | <img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/ramp_segmented.png" width="250" height="250" />
 
 Most of the image processing was implemented using nodelets, inside the [openni_layer](https://github.com/MahdiehNejati/smart_wheelchair/blob/vision/src/nuric_system/launch/system/openni_layer.launch#L87-L163) launch file. This not only ensures the computation costs are kept at a minimum, but also because nodelets have several desirable characteristics as opposed to writing a separate node that loads pcl_ros libraries: 
 
@@ -75,15 +75,15 @@ The last point is especially useful when tuning parameters in the image processi
 
 The ramp detection algorithmic pipeline looks like this: 
 
-![ramp_pcl_pipeline](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/ramp_pcl.jpg) 
+<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/ramp_pcl_pipeline.jpg" width="650" height="250" />
 
 This was my first foray into image processing with point cloud data, and I found the [pointcloud.org tutorials](http://pointclouds.org/documentation/tutorials/) helpful and well written. 
 
 ## Wheelchair Model
 
-![updated_urdf](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/new_tf.png)
+<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/new_urdf.jpg" width="1200" height="800" />
 
-![deprecated_urdf](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/old_tf.png)
+<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/old_urdf.jpg" width="1200" height="800" />
 
 ## Differential Drive Controller
 
@@ -91,6 +91,7 @@ tested in different environement
 
 ## Code Structure
 
+<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/smart_wheelchair_structure.jpg" width="900" height="800" />
 
 ## Future Work
 
