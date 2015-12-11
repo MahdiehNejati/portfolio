@@ -33,7 +33,9 @@ The major components of this work included:
 
 ## Platform
 
-![wheelchair](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/wheeelchair_sim_model.png)
+Real Platform | Simulated Platform
+------------ | -------------
+![real_wheelchair](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/real_wheelchair.jpg) | ![sim_wheelchair](https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/wheelchair_sim_model.png)
 
 This work is based on the current wheelchair platform at the [Argallab](http://smpp.northwestern.edu/research/argallab/research.html). 
 
