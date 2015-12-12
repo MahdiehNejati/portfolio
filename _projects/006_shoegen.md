@@ -8,5 +8,4 @@ image: shoe3.JPG
 ## Overview
 
 
-
- http://spectrum.ieee.org/green-tech/fuel-cells/squishy-power-generators
+I was also mentioned by name in a press [release](http://spectrum.ieee.org/green-tech/fuel-cells/squishy-power-generators) for this work. 

@@ -108,7 +108,7 @@ Prior to my updates, the caster wheels were rigid links and haphazardly linked t
 
 ### Gazebo World
 
-I designed several different Gazebo worlds while developing the algorithm in order to have multiple test environments. 
+To further develop and improve upon the algorithm, I designed several different Gazebo worlds, each with unique properties to allow for a more expansive test environment. 
 
 ## Differential Drive Controller
 
