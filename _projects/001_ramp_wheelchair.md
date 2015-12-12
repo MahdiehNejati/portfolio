@@ -40,6 +40,22 @@ This work is based on the current wheelchair platform at the [Argallab](http://s
 * Input: Point Cloud data from the on-board Asus Xtion
 * Non-honolomic differential drive base
 
+## Stages of Development
+
+The smart_wheelchair code has been developed for planar surface navigation, with doorway detection and docking location detection. Every other object in the world is treated as an obstacle. However, incline navigation and drop-off avoidance is important features, especially for urban navigation of powered wheelchairs. The video below shows how the wheelchair behaves without my code. It sees the ramp as an obstacle, and once it get to the incline, it will turn around and try to move past it.  
+
+<iframe src="https://player.vimeo.com/video/148692289?loop=1" width="500" height="282" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  
+
+I developed a ramp detection algorithm and implemented it within the code structure. By doing so, the ramp is cleared from point cloud that is sent to the cost map server, called "cloud small". The cost map does not mark the incline as an obstacle and it remains traversable. With this algorithm in place, the wheelchair does not try to avoid the ramp. However, the controller written for the simulation, as well as the URDF were needed to be fixed, because as you can see in the video below, as much as the wheelchair is trying, it cannot drive over the incline. 
+
+<iframe src="https://player.vimeo.com/video/148693925" width="500" height="311" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+I updated and cleaned the URDF, and implemented a Differential Drive Controller. With the ramp detection algorithm and the new controller, the wheelchair can now successfully and safely  drive over inclines. 
+
+<iframe src="https://player.vimeo.com/video/148693996" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+
+Below is some more detail about the different stages of the project development thus far. 
+
 ## Ramp Detection Algorithm
 
 Raw Point Cloud | Planar Surface Extraction | Ramp Segmentation
@@ -67,7 +83,7 @@ Most of the image processing was implemented using nodelets, inside the [openni_
 * Point cloud does not get copied or serialized.
 * Provide separate namespaces such that nodelets act lik a separate node despite being in the same process. 
 * Dynamically reconfigurable using 
-	 ``` rosrun rqt_reconfigure rqt_reconfigure ```
+     ``` rosrun rqt_reconfigure rqt_reconfigure ```
 	
 The last point is especially useful when tuning parameters in the image processing pipeline and significantly speeds up fine-tuning the algorithm. 
 
@@ -79,26 +95,33 @@ This was my first foray into image processing with point cloud data, and I found
 
 ## Simulation Model
 
-### Gazebo World
-
-I developed three different ramp worlds for developing the algorithm in simulation. 
-
 ### Wheelchair Model
+
+The URDF model in the smart_wheelchair package used deprecated packages, and the caster wheels were defined as rigid joints, and fixed parts of the wheelchair were described as links and joints. This made the code unnecessarily long, complicated, and unusable for my project. I cleaned up the URDF (down to 460 lines of code from >2000 lines) and updated it so that it only uses updated and maintained ROS plugins for the sensors and controllers. There were also issues with the Kinect mesh file that I fixed. 
+
+The wheelchair has two main wheels, four caster wheels, and an ASUS Xtion camera. These elements are the only links and joints that make up the URDF, as seen in the diagram below:
 
 <img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/new_urdf.jpg" width="800" height="600" />
 
-<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/old_urdf.jpg" width="800" height="300" />
+Prior to my updates, the caster wheels were rigid links and haphazardly linked to the wheelchair body. All six wheels rotate and are correctly position in the new URDF. 
+
+### Gazebo World
+
+I designed several different ramp worlds for developing the algorithm in simulation, and to have multiple test environments. 
 
 ## Differential Drive Controller
 
-<iframe src="https://player.vimeo.com/video/148692289?loop=1" width="500" height="282" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/148692289">wheelchair_avoiding_ramp</a> from <a href="https://vimeo.com/user46733743">Mahdieh Nejati</a> on <a href="https://vimeo.com">Vimeo</a>.</p> <p>smart_wheelchair project: Without the ramp_assistance node, the ramp is considered an obstacle by the costmap and is avoided by the wheelchair.</p>
+There are many well written and well maintained [ros controllers](http://wiki.ros.org/ros_controllers?distro=indigo); one of which is the [diff_drive_controller](http://wiki.ros.org/diff_drive_controller?distro=indigo) package I used for the kinematic control of the wheelchair. 
 
-tested in different environements
+The Clearpath Robotics [Jackal](http://wiki.ros.org/Robots/Jackal) and [Husky](http://wiki.ros.org/Robots/Husky) are two robots that also use the diff_drive_controller. Although there isn't a specific tutorial on how to use this plugin, the [jackal_control](https://github.com/jackal/jackal/tree/indigo-devel/jackal_control) and [husky_control](https://github.com/husky/husky/tree/indigo-devel/husky_control) packages are very well written, and I used them as templates for how to implement the controller within my wheelchair package. 
+
 
 ## Code Structure
+
+The smart_wheelchair package has gone through a lot of development. The code is complex, but very well written and maintained. The code is currently private, because it is still under development. However, below is a diagram of the code flow. In order to modify the software, I had to understand the code structure pipeline and add/modify the code appropriately. When adding a new package, such as the controller, I kept with the rest of the code's naming and structuring standard. 
 
 <img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/smart_wheelchair_structure.jpg" width="900" height="800" />
 
 ## Future Work
 
-The over-arching goal of this project was to create a ramp layer and drop-off layer to the ROS navstack package, such that any wheeled robot can easily incorporate this algorithm. Work on this is currently under way. 
+The over-arching goal of this project is to create a ramp layer and drop-off layer to the ROS navigation stack package, such that any wheeled robot can easily incorporate this algorithm. Work on this is currently under way. 
