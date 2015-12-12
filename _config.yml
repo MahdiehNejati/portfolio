@@ -3,7 +3,7 @@ title:              Mahdieh's Robotic Project Portfolio
 email:              m.nejati@u.northwestern.edu
 description:        "Portfolio for documenting robotics projects in the  MSR program at Northwestern University"
 url:                "http://localhost:4000"
-baseurl:            /portfolio
+baseurl:            /website
 
 # File structure settings
 image_path:         /public/images
