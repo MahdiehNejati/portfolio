@@ -55,7 +55,7 @@ The image processing was done using the [Point Cloud Library](http://pointclouds
 * Numerous algorithms for filtering, model segmentation, etc. 
 * Many algorithms are already compiled as ROS nodelets.
 
-The ramp segmentation code was first developed as a standalone C++ file that takes in PCD files as the input. The code is linked [here](https://github.com/MahdiehNejati/my_pcl/blob/master/ramp_segmentation/ramp_segmentation.cpp). After the basic algorithm was developed, it was incorporated into the ROS framework by taking point cloud topics as the input. 
+The ramp segmentation code was first developed as a standalone C++ file that takes PCD files as the input. My code is linked [here](https://github.com/MahdiehNejati/my_pcl/blob/master/ramp_segmentation/ramp_segmentation.cpp). After the basic algorithm was developed, it was incorporated into the ROS framework by taking point cloud topics as the input. 
 
 Gazebo Sim Scene | Planar Surface Extraction | Ramp Segmentation
 ------------ | ------------- | ------------ 
@@ -79,15 +79,19 @@ The ramp detection algorithmic pipeline looks like this:
 
 This was my first foray into image processing with point cloud data, and I found the [pointcloud.org tutorials](http://pointclouds.org/documentation/tutorials/) helpful and well written. 
 
-## Wheelchair Model
+## Simulation Model
 
-<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/new_urdf.jpg" width="1200" height="800" />
+### Gazebo World
 
-<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/old_urdf.jpg" width="1200" height="800" />
+### Wheelchair Model
+
+<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/new_urdf.jpg" width="800" height="600" />
+
+<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/old_urdf.jpg" width="800" height="300" />
 
 ## Differential Drive Controller
 
-tested in different environement
+tested in different environements
 
 ## Code Structure
 
