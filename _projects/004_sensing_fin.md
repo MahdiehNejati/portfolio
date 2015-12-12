@@ -5,6 +5,4 @@ date: November 19, 2011
 image: sensingfin.png
 ---
 
-## Overview
-
-[Presentation](https://github.com/mahdiehnejati/portfolio/blob/gh-pages/public/documents/sensingfin.pptx) 
+<iframe src="https://player.vimeo.com/video/148700339" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 

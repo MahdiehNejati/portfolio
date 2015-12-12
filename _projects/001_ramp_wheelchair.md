@@ -42,7 +42,7 @@ This work is based on the current wheelchair platform at the [Argallab](http://s
 
 ## Stages of Development
 
-The smart_wheelchair code has been developed for planar surface navigation, with doorway detection and docking location detection. Every other object in the world is treated as an obstacle. However, incline navigation and drop-off avoidance is important features, especially for urban navigation of powered wheelchairs. The video below shows how the wheelchair behaves without my code. It sees the ramp as an obstacle, and once it get to the incline, it will turn around and try to move past it.  
+The smart_wheelchair code has been developed for planar surface navigation, with doorway detection and docking location detection. Every other object in the world is treated as an obstacle. However, incline navigation and drop-off avoidance is important features, especially for urban navigation of powered wheelchairs. The video below shows how the wheelchair behaves without my code. It sees the ramp as an obstacle and will turn around in order to move past it.  
 
 <iframe src="https://player.vimeo.com/video/148692289?loop=1" width="500" height="282" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  
 
@@ -81,11 +81,12 @@ Most of the image processing was implemented using nodelets, inside the [openni_
 * No copy costs incurred when passing messages intraprocess
 * Dynamically loadable at runtime.
 * Point cloud does not get copied or serialized.
-* Provide separate namespaces such that nodelets act lik a separate node despite being in the same process. 
+* Provide separate namespaces such that nodelets act like a separate node despite being in the same process. 
 * Dynamically reconfigurable using 
+
      ``` rosrun rqt_reconfigure rqt_reconfigure ```
 	
-The last point is especially useful when tuning parameters in the image processing pipeline and significantly speeds up fine-tuning the algorithm. 
+The last point is especially useful when tuning parameters in the image processing pipeline in that it significantly speeds up the fine-tuning the algorithm. 
 
 The ramp detection algorithmic pipeline looks like this: 
 
@@ -107,7 +108,7 @@ Prior to my updates, the caster wheels were rigid links and haphazardly linked t
 
 ### Gazebo World
 
-I designed several different ramp worlds for developing the algorithm in simulation, and to have multiple test environments. 
+I designed several different Gazebo worlds while developing the algorithm in order to have multiple test environments. 
 
 ## Differential Drive Controller
 
@@ -115,12 +116,11 @@ There are many well written and well maintained [ros controllers](http://wiki.ro
 
 The Clearpath Robotics [Jackal](http://wiki.ros.org/Robots/Jackal) and [Husky](http://wiki.ros.org/Robots/Husky) are two robots that also use the diff_drive_controller. Although there isn't a specific tutorial on how to use this plugin, the [jackal_control](https://github.com/jackal/jackal/tree/indigo-devel/jackal_control) and [husky_control](https://github.com/husky/husky/tree/indigo-devel/husky_control) packages are very well written, and I used them as templates for how to implement the controller within my wheelchair package. 
 
-
 ## Code Structure
 
 The smart_wheelchair package has gone through a lot of development. The code is complex, but very well written and maintained. The code is currently private, because it is still under development. However, below is a diagram of the code architecture. In order to modify the software, I had to understand the software pipeline and add/modify the code appropriately. When adding a new package, such as the controller package, I kept with the rest of the code's naming and structuring standard. 
 
-<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/smart_wheelchair_structure.jpg" width="900" height="800" />
+<img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/smart_wheelchair_structure.jpg" width="650" height="500" />
 
 ## Future Work
 

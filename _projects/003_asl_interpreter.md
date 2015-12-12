@@ -11,7 +11,7 @@ This project uses a combination of image analysis techniques and a nearest neigh
 ### Introduction
 The purpose of this project is to identify machine learning algorithms and classification methods that can accurately understand signed hand gestures in real time. To achieve this task, the input to our algorithm is one static image of a sign and the output is the identity of the sign.
 
-Hand gesture recognition for human computer interaction is an area of active research in machine learning and computer vision. The applications of gesture recognition can be extended to several useful fields,especially in robotics and human-computer interaction. The primary goal of our gesture recognition project was to create a system which can identify American Sign Language (ASL) gestures and translate them to the written English alphabet.
+Hand gesture recognition for human computer interaction is an area of active research in machine learning and computer vision. The applications of gesture recognition can be extended to several useful fields, especially in robotics and human-computer interaction. The primary goal of our gesture recognition project was to create a system which can identify American Sign Language (ASL) gestures and translate them to the written English alphabet.
 
 An estimated 360 million people worldwide suffer from hearing loss. Because the majority of hearing
 individuals do not understand sign language, communication between the hearing and the deaf can be
