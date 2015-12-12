@@ -7,11 +7,9 @@ image: wheelchair.jpg
 
 ## Overview 
 
-
 ### Motivation
 
 There are basic maneuvering tasks with a powered wheelchair, such as passing through a doorway, traversing ramps, and avoiding drop-offs, which can be difficult for powered wheelchair users with severe motor impairments - not only because of limitations in the users own motor control, but also because of the limitations in the control interfaces available to them. [Professor Argall](http://users.eecs.northwestern.edu/~argall/) and her [lab](http://smpp.northwestern.edu/research/argallab/) are developing a partial-automation wheelchair that combines the intent of the user with the assistance of automated obstacle avoidance, navigation, route planning, and spatially constrained maneuvers. The current wheelchair platform has doorway assistance and docking assistance functionalities. The motivation for this project was to extend on the current capabilities of this partial-automated wheelchair. 
-
 
 ### Aim
 
@@ -83,6 +81,8 @@ This was my first foray into image processing with point cloud data, and I found
 
 ### Gazebo World
 
+I developed three different ramp worlds for developing the algorithm in simulation. 
+
 ### Wheelchair Model
 
 <img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/new_urdf.jpg" width="800" height="600" />
@@ -90,6 +90,8 @@ This was my first foray into image processing with point cloud data, and I found
 <img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/old_urdf.jpg" width="800" height="300" />
 
 ## Differential Drive Controller
+
+<iframe src="https://player.vimeo.com/video/148692289?loop=1" width="500" height="282" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/148692289">wheelchair_avoiding_ramp</a> from <a href="https://vimeo.com/user46733743">Mahdieh Nejati</a> on <a href="https://vimeo.com">Vimeo</a>.</p> <p>smart_wheelchair project: Without the ramp_assistance node, the ramp is considered an obstacle by the costmap and is avoided by the wheelchair.</p>
 
 tested in different environements
 
