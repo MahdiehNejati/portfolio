@@ -118,7 +118,7 @@ The Clearpath Robotics [Jackal](http://wiki.ros.org/Robots/Jackal) and [Husky](h
 
 ## Code Structure
 
-The smart_wheelchair package has gone through a lot of development. The code is complex, but very well written and maintained. The code is currently private, because it is still under development. However, below is a diagram of the code flow. In order to modify the software, I had to understand the code structure pipeline and add/modify the code appropriately. When adding a new package, such as the controller, I kept with the rest of the code's naming and structuring standard. 
+The smart_wheelchair package has gone through a lot of development. The code is complex, but very well written and maintained. The code is currently private, because it is still under development. However, below is a diagram of the code architecture. In order to modify the software, I had to understand the software pipeline and add/modify the code appropriately. When adding a new package, such as the controller package, I kept with the rest of the code's naming and structuring standard. 
 
 <img src="https://raw.githubusercontent.com/MahdiehNejati/portfolio/gh-pages/public/images/smart_wheelchair_structure.jpg" width="900" height="800" />
 
