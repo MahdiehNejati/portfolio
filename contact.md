@@ -12,4 +12,4 @@ Thank you for visiting my site. Please visit again as my experience with robots 
 * Email: m.nejati@u.northwestern.edu
 * LinkedIn: [Mahdieh Nejati](https://www.linkedin.com/profile/view?id=209310293&trk=nav_responsive_tab_profile "Mahdieh's LinkedIn Profile")
 * Phone: (920) 716-7631
-* Address: 1735 Chicago Ave. 902N, Evanston, IL, 60201
+* Address: Chicago, IL, 60201
