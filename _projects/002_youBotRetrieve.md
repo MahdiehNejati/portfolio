@@ -5,6 +5,8 @@ date: September 22, 2014
 image: youbot_retrieve.png
 ---
 
+<iframe src="https://player.vimeo.com/video/114483339" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 ## Overview
 The goal of this project was to develop a package for the KUKA youBot that enables the youBot to drive towards a predetermined object, align itself properly, pick up the object and return to the home position. The project required us to apply our knowledge of ROS (Robot Operating System) learned during the ["Embedded Systems in Robotics"](http://www.mccormick.northwestern.edu/mechanical/courses/descriptions/495-embedded-systems-in-robotics.html) course instructed by Dr. Schultz. This was the first time we used ROS to control a real robot. As such, we needed to be aware of the interaction between hardware and software during the development process.
 
@@ -17,8 +19,6 @@ This package was developed in two parts. The two packages were then combined int
 2. Grasp control of the 5 degree of freedom arm
 
   * youbot_grasp_msr
-
-You can watch a clip of the youBot working with our package [here](https://vimeo.com/114483339 "vimeo clip for youbot_retrieve_msr"). 
 
 At present, the robot can only grasp a block of limited dimensions, using a predefined static map. 
 

@@ -5,6 +5,8 @@ date: May 26, 2015
 image: aslF.jpg
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WusL_jwaQfc" frameborder="0" allowfullscreen></iframe>
+
 ## Overview
 This project uses a combination of image analysis techniques and a nearest neighbor algorithm to design a sign language interpreter. Decision Tree, k-Nearest Neighbor, Naïve Bayes, and Random Forest machine learning techniques were applied to the data in order to correctly classify signed gestures belonging to the American Sign Language (ASL). Analysis of the results shows that 3-Nearest Neighbor is able to produce a model with a testing accuracy of 97% on this data. Using 3-NN, we were able to develop a program that correctly classifies ASL signs and returns the correct letter from the English alphabet in under 10 seconds. 
 
@@ -56,7 +58,5 @@ We were able to successfully collect data of ASL gestures and represent the imag
 We were also able to test different supervised classification machine learning methods on our dataset and compare their accuracies. We used the Weka 3.6 package. By doing so, we were able to choose the most accurate classifier for our prediction step. We discovered that for our training data, the 3 Nearest Neighbor classifier was the best choice with a classification accuracy of 96.78% on test data and a processing time of about 10 seconds.
  
 Finally, we successfully implemented our data preprocessing code along with our chosen high-accuracy classifier into a program that can correctly classify signed gestures from individuals outside of the dataset space and return the correct corresponding letter, in real time. 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WusL_jwaQfc" frameborder="0" allowfullscreen></iframe>
 
 ### You can find more information on the project [website](http://mahdiehn.wix.com/aslinterpreter). 

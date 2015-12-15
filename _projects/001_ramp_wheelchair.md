@@ -7,6 +7,22 @@ image: wheelchair.jpg
 
 ## Overview 
 
+## Stages of Development
+
+The smart_wheelchair code has been developed for planar surface navigation, with doorway detection and docking location detection. Every other object in the world is treated as an obstacle. However, incline navigation and drop-off avoidance is important features, especially for urban navigation of powered wheelchairs. The video below shows how the wheelchair behaves without my code. It sees the ramp as an obstacle and will turn around in order to move past it.  
+
+<iframe src="https://player.vimeo.com/video/148692289?loop=1" width="500" height="282" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  
+
+I developed a ramp detection algorithm and implemented it within the code structure. By doing so, the ramp is cleared from point cloud that is sent to the cost map server, called "cloud small". The cost map does not mark the incline as an obstacle and it remains traversable. With this algorithm in place, the wheelchair does not try to avoid the ramp. However, the controller written for the simulation, as well as the URDF were needed to be fixed, because as you can see in the video below, as much as the wheelchair is trying, it cannot drive over the incline. 
+
+<iframe src="https://player.vimeo.com/video/148693925" width="500" height="311" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+I updated and cleaned the URDF, and implemented a Differential Drive Controller. With the ramp detection algorithm and the new controller, the wheelchair can now successfully and safely  drive over inclines. 
+
+<iframe src="https://player.vimeo.com/video/148693996" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+
+Below is some more detail about the different stages of the project development thus far. 
+
 ### Motivation
 
 There are basic maneuvering tasks with a powered wheelchair, such as passing through a doorway, traversing ramps, and avoiding drop-offs, which can be difficult for powered wheelchair users with severe motor impairments - not only because of limitations in the users own motor control, but also because of the limitations in the control interfaces available to them. [Professor Argall](http://users.eecs.northwestern.edu/~argall/) and her [lab](http://smpp.northwestern.edu/research/argallab/) are developing a partial-automation wheelchair that combines the intent of the user with the assistance of automated obstacle avoidance, navigation, route planning, and spatially constrained maneuvers. The current wheelchair platform has doorway assistance and docking assistance functionalities. The motivation for this project was to extend on the current capabilities of this partial-automated wheelchair. 
@@ -40,22 +56,6 @@ This work is based on the current wheelchair platform at the [Argallab](http://s
 * Input: Point Cloud data from the on-board Asus Xtion
 * Non-honolomic differential drive base
 
-## Stages of Development
-
-The smart_wheelchair code has been developed for planar surface navigation, with doorway detection and docking location detection. Every other object in the world is treated as an obstacle. However, incline navigation and drop-off avoidance is important features, especially for urban navigation of powered wheelchairs. The video below shows how the wheelchair behaves without my code. It sees the ramp as an obstacle and will turn around in order to move past it.  
-
-<iframe src="https://player.vimeo.com/video/148692289?loop=1" width="500" height="282" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  
-
-I developed a ramp detection algorithm and implemented it within the code structure. By doing so, the ramp is cleared from point cloud that is sent to the cost map server, called "cloud small". The cost map does not mark the incline as an obstacle and it remains traversable. With this algorithm in place, the wheelchair does not try to avoid the ramp. However, the controller written for the simulation, as well as the URDF were needed to be fixed, because as you can see in the video below, as much as the wheelchair is trying, it cannot drive over the incline. 
-
-<iframe src="https://player.vimeo.com/video/148693925" width="500" height="311" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-I updated and cleaned the URDF, and implemented a Differential Drive Controller. With the ramp detection algorithm and the new controller, the wheelchair can now successfully and safely  drive over inclines. 
-
-<iframe src="https://player.vimeo.com/video/148693996" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-
-Below is some more detail about the different stages of the project development thus far. 
-
 ## Ramp Detection Algorithm
 
 Raw Point Cloud | Planar Surface Extraction | Ramp Segmentation
@@ -86,7 +86,7 @@ Most of the image processing was implemented using nodelets, inside the [openni_
 
      ``` rosrun rqt_reconfigure rqt_reconfigure ```
 	
-The last point is especially useful when tuning parameters in the image processing pipeline in that it significantly speeds up the fine-tuning the algorithm. 
+The last point is especially useful when tuning parameters in the image processing pipeline in that it significantly speeds up the fine-tuning of the algorithm.  
 
 The ramp detection algorithmic pipeline looks like this: 
 
