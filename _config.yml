@@ -1,21 +1,21 @@
 theme: jekyll-theme-cayman
 
-# Site settings
-title:              Portfolio Template
-email:              your-email@domain.com
-description:        "Portfolio template for students in the MSR program at Northwestern University"
-url:                "http://localhost:4000"
-baseurl:            /msr-student-template
+# # Site settings
+# title:              Portfolio Template
+# email:              your-email@domain.com
+# description:        "Portfolio template for students in the MSR program at Northwestern University"
+# url:                "http://localhost:4000"
+# baseurl:            /msr-student-template
 
-# File structure settings
-image_path:         /public/images
+# # File structure settings
+# image_path:         /public/images
 
-# Build settings
-markdown:           kramdown
-permalink:          pretty
+# # Build settings
+# markdown:           kramdown
+# permalink:          pretty
 
-# Collection definitions and settings
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
+# # Collection definitions and settings
+# collections:
+#   projects:
+#     output: true
+#     permalink: /projects/:path/
